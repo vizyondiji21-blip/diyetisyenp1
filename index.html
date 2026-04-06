@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diyetisyenp1 | Sağlıklı Yaşam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f4f9f4; color: #2d4a3e; line-height: 1.6; }
+        html { scroll-behavior: smooth; }
+        :root { --ana-yesil: #8cae94; --koyu-yesil: #4a6351; --acik-yesil: #e8f3eb; }
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+        section { padding: 80px 10%; }
+        .container { display: flex; align-items: center; gap: 50px; margin-bottom: 50px; }
+        .container.reverse { flex-direction: row-reverse; }
+        .image-box img { width: 100%; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .text-box { flex: 1; } .image-box { flex: 1; }
+        @media (max-width: 768px) { .container, .container.reverse { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <nav><div style="font-weight:600; font-size:1.5rem;">diyetisyenp1</div></nav>
+    <header class="hero"><div><h1>diyetisyenp1</h1><p>Sağlıklı yaşam yolculuğunuz başlıyor.</p></div></header>
+    <section id="hakkimda">
+        <div class="container">
+            <div class="text-box"><h2>Hakkımda</h2><p>Uzman yaklaşımlarla yanınızdayız.</p></div>
+            <div class="image-box"><img src="hakkimda.jpg" alt="Diyetisyen"></div>
+        </div>
+        <div class="container reverse">
+            <div class="text-box"><h2>Sertifikalarım</h2><p>Eğitim ve başarı belgelerimiz.</p></div>
+            <div class="image-box"><img src="diploma.jpg" style="border:10px solid gold; padding:5px;" alt="Sertifika"></div>
+        </div>
+    </section>
+    <footer style="background:#333; color:white; text-align:center; padding:20px;">© 2026 diyetisyenp1</footer>
+</body>
+</html>
