@@ -3,30 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>diyetisyenp1 | Sağlıklı Yaşam ve Beslenme</title>
+    <title>diyetisyenp1 | Profesyonel Sağlıklı Yaşam Merkezi</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* GENEL TASARIM */
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-            font-family: 'Poppins', sans-serif; 
-        }
-        
-        body { 
-            background-color: #f4f9f4; 
-            color: #2d4a3e; 
-            line-height: 1.6; 
-            overflow-x: hidden; 
-        }
-
+        /* GENEL SIFIRLAMA VE RENKLER */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f4f9f4; color: #2d4a3e; line-height: 1.6; overflow-x: hidden; }
         html { scroll-behavior: smooth; }
-
+        
         :root {
             --ana-yesil: #8cae94;
             --koyu-yesil: #4a6351;
@@ -34,7 +22,7 @@
             --beyaz: #ffffff;
         }
 
-        /* NAVBAR (MOBİL VE MASAÜSTÜ İÇİN SABİT) */
+        /* ÜST MENÜ (NAVBAR) */
         nav {
             background: rgba(255, 255, 255, 0.98);
             padding: 0.8rem 5%;
@@ -44,34 +32,15 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 9999;
+            z-index: 10000;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
         }
-
-        .logo { 
-            font-weight: 600; 
-            font-size: 1.4rem; 
-            color: var(--koyu-yesil); 
-            text-decoration: none;
-        }
-
-        .nav-links { 
-            list-style: none; 
-            display: flex; 
-            gap: 20px; 
-        }
-
-        .nav-links a { 
-            text-decoration: none; 
-            color: var(--koyu-yesil); 
-            font-weight: 600; 
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
+        .logo { font-weight: 600; font-size: 1.4rem; color: var(--koyu-yesil); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--koyu-yesil); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--ana-yesil); }
 
-        /* GİRİŞ (HERO) BÖLÜMÜ */
+        /* GİRİŞ ALANI (HERO) */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('kahraman.jpg');
@@ -84,45 +53,28 @@
             color: var(--beyaz);
             padding: 0 20px;
         }
-
-        .hero-content h1 { 
-            font-size: 3rem; 
-            margin-bottom: 15px; 
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-        }
-
+        .hero-content h1 { font-size: 3.2rem; margin-bottom: 15px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
         .hero-content p { font-size: 1.2rem; font-weight: 300; }
 
-        /* İÇERİK KONTEYNERLARI (ZIGZAG) */
+        /* İÇERİK BÖLÜMLERİ (ZIGZAG DÜZENİ) */
         section { padding: 100px 10% 60px; }
-
-        .container { 
-            display: flex; 
-            align-items: center; 
-            gap: 60px; 
-            margin-bottom: 80px; 
-        }
-
+        .container { display: flex; align-items: center; gap: 60px; margin-bottom: 80px; }
         .container.reverse { flex-direction: row-reverse; }
-
         .text-box { flex: 1; }
-        .text-box h2 { font-size: 2rem; margin-bottom: 20px; color: var(--koyu-yesil); }
-        
+        .text-box h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--koyu-yesil); }
         .image-box { flex: 1; text-align: center; }
-        .image-box img { 
-            width: 100%; 
-            max-width: 500px; 
-            border-radius: 30px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
-            transition: 0.4s;
-        }
+        .image-box img { width: 100%; max-width: 500px; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: 0.4s; }
         .image-box img:hover { transform: translateY(-10px); }
 
-        /* HİZMETLER ALANI */
-        #hizmetler { background-color: var(--acik-yesil); border-radius: 50px 50px 0 0; }
-        .hizmet-baslik { text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: var(--koyu-yesil); }
+        /* RANDEVU TAKVİM ALANI */
+        #randevu { background-color: var(--beyaz); text-align: center; border-top: 1px solid #eee; }
+        .calendly-wrapper { width: 100%; max-width: 1000px; margin: 40px auto 0; min-height: 700px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* WHATSAPP YÜZEN BUTON */
+        /* HİZMETLER ALANI */
+        #hizmetler { background-color: var(--acik-yesil); border-radius: 60px 60px 0 0; }
+        .hizmet-baslik { text-align: center; margin-bottom: 60px; font-size: 2.6rem; color: var(--koyu-yesil); }
+
+        /* WHATSAPP BUTONU */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -134,7 +86,7 @@
             border-radius: 50px;
             text-align: center;
             font-size: 35px;
-            box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
             z-index: 10000;
             display: flex;
             align-items: center;
@@ -145,37 +97,20 @@
         .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebe57; }
 
         /* İLETİŞİM VE FOOTER */
-        #iletisim { 
-            background-color: var(--koyu-yesil); 
-            color: white; 
-            text-align: center; 
-            padding: 80px 20px; 
-        }
-
-        .footer { 
-            background-color: #333; 
-            color: white; 
-            padding: 20px; 
-            text-align: center; 
-            font-size: 0.8rem; 
-        }
+        #iletisim { background-color: var(--koyu-yesil); color: white; text-align: center; padding: 80px 20px; }
+        .footer { background-color: #333; color: white; padding: 25px; text-align: center; font-size: 0.85rem; }
 
         /* MOBİL UYUMLULUK AYARLARI */
         @media (max-width: 768px) {
-            nav { padding: 1rem 3%; }
+            nav { padding: 1rem 4%; }
             .logo { font-size: 1.1rem; }
-            .nav-links { gap: 10px; }
+            .nav-links { gap: 12px; }
             .nav-links a { font-size: 0.75rem; }
-            
-            .container, .container.reverse { 
-                flex-direction: column; 
-                text-align: center; 
-                gap: 30px;
-            }
-
-            .hero-content h1 { font-size: 2rem; }
-            section { padding: 80px 5% 40px; }
-            .text-box h2 { font-size: 1.6rem; }
+            .container, .container.reverse { flex-direction: column; text-align: center; gap: 40px; }
+            .hero-content h1 { font-size: 2.2rem; }
+            section { padding: 80px 6% 40px; }
+            .text-box h2 { font-size: 1.8rem; }
+            .calendly-wrapper { min-height: 850px; } /* Mobilde takvim daha uzun görünebilir */
         }
     </style>
 </head>
@@ -185,6 +120,7 @@
         <a href="#" class="logo">diyetisyenp1</a>
         <ul class="nav-links">
             <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#randevu">Randevu</a></li>
             <li><a href="#hizmetler">Hizmetler</a></li>
             <li><a href="#iletisim">İletişim</a></li>
         </ul>
@@ -193,7 +129,7 @@
     <header class="hero">
         <div class="hero-content">
             <h1>diyetisyenp1 ile Formda Kal</h1>
-            <p>Kayseri Talas'ta Sağlıklı Beslenme ve Yaşam Danışmanlığı</p>
+            <p>Kayseri Talas'ta Profesyonel Beslenme Danışmanlığı</p>
         </div>
     </header>
 
@@ -201,7 +137,7 @@
         <div class="container">
             <div class="text-box">
                 <h2>Hakkımda</h2>
-                <p>Uzman görüşü ve kişiye özel yaklaşımlarla diyetisyenp1 çatısı altında size en uygun beslenme programlarını hazırlıyorum. Sağlıklı bir yaşam için adım atın.</p>
+                <p>Uzman yaklaşımlar ve size özel hazırlanan programlarla diyetisyenp1 çatısı altında sağlıklı yaşam kapılarını birlikte aralıyoruz. Sürdürülebilir beslenme alışkanlıkları için yanınızdayım.</p>
             </div>
             <div class="image-box">
                 <img src="hakkimda.jpg" alt="Diyetisyen Hakkımda">
@@ -211,11 +147,21 @@
         <div class="container reverse">
             <div class="text-box">
                 <h2>Başarılarımız ve Sertifikalar</h2>
-                <p>Bilimsel temelli eğitimler ve güncel sertifikalarla güvenilir hizmet sunuyoruz. Sürekli gelişen tıp dünyasını yakından takip ediyoruz.</p>
+                <p>Bilimsel veriler ışığında, güncel sertifikalar ve sürekli yenilenen eğitimlerle en güvenilir hizmeti sunmayı amaçlıyoruz.</p>
             </div>
             <div class="image-box">
-                <img src="diploma.jpg" alt="Sertifikalarımız" style="border: 10px solid white;">
+                <img src="diploma.jpg" alt="Sertifikalar" style="border: 8px solid white;">
             </div>
+        </div>
+    </section>
+
+    <section id="randevu">
+        <h2 style="font-size: 2.4rem; color: var(--koyu-yesil);">Online Randevu Takvimi</h2>
+        <p>Aşağıdaki panel üzerinden size uygun günü ve saati seçerek randevunuzu saniyeler içinde oluşturabilirsiniz.</p>
+        
+        <div class="calendly-wrapper">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/vizyondiji21/30min" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
     </section>
 
@@ -225,7 +171,7 @@
         <div class="container">
             <div class="text-box">
                 <h3>Yüz Yüze Diyet</h3>
-                <p>Klinik ortamında profesyonel vücut analizi ve düzenli takip süreci ile hedeflerinize ulaşıyoruz.</p>
+                <p>Klinik ortamında gerçekleştirilen vücut analizi ve yüz yüze görüşmelerle motivasyonunuzu en üst seviyede tutuyoruz.</p>
             </div>
             <div class="image-box">
                 <img src="hizmet1.png" alt="Yüz Yüze Diyet">
@@ -235,7 +181,7 @@
         <div class="container reverse">
             <div class="text-box">
                 <h3>Online Danışmanlık</h3>
-                <p>Mesafe tanımadan, görüntülü görüşmeler ve anlık takip sistemi ile her an yanınızdayız.</p>
+                <p>Mekan sınırlaması olmadan, görüntülü görüşmeler ve dijital takip sistemleri ile hedeflerinize her yerden ulaşın.</p>
             </div>
             <div class="image-box">
                 <img src="hizmet2.png" alt="Online Danışmanlık">
@@ -245,7 +191,7 @@
         <div class="container">
             <div class="text-box">
                 <h3>Kişiye Özel Beslenme Planı</h3>
-                <p>Yaşam tarzınıza, sevdiğiniz besinlere ve sağlık durumunuza en uygun sürdürülebilir listeler hazırlıyoruz.</p>
+                <p>Kan değerleriniz, yaşam tarzınız ve sevdiğiniz besinler göz önüne alınarak hazırlanan, size özel sürdürülebilir listeler.</p>
             </div>
             <div class="image-box">
                 <img src="hizmet3.png" alt="Beslenme Planı">
